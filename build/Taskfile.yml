@@ -1,0 +1,19 @@
+version: "3"
+
+silent: true
+
+vars:
+  PREFIX:
+    sh: pwd
+  S3_BUCKET: "netcco-r2_cloudflare:skynx-assets"
+
+tasks:
+  publish:
+    desc: Publish assets to skynx S3 object storage.
+    cmds:
+      - |-
+        rclone --progress --s3-acl "public-read" --copy-links copy \
+          '{{.PREFIX}}/images/' '{{.S3_BUCKET}}/images/'
+      - |-
+        rclone --progress --s3-acl "public-read" --copy-links copy \
+          '{{.PREFIX}}/videos/' '{{.S3_BUCKET}}/videos/'

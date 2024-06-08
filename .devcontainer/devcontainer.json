@@ -10,6 +10,7 @@
         // "ghcr.io/devcontainers-contrib/features/actionlint:1": { },
         "ghcr.io/devcontainers-contrib/features/go-task:1": { },
         "ghcr.io/devcontainers-contrib/features/svu-asdf:2": { },
+        "ghcr.io/devcontainers-contrib/features/rclone:1": { },
         "ghcr.io/devcontainers-contrib/features/apt-get-packages:1": {
             "packages": "pinentry-tty,clang-format,most"
         }
@@ -50,6 +51,7 @@
         "source=${localEnv:HOME}/.environment,target=/home/vscode/.zshenv,type=bind,consistency=cached",
         "source=${localEnv:HOME}/.bash_aliases,target=/home/vscode/.bash_aliases,type=bind,consistency=cached",
         "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
-        "source=${localEnv:HOME}/.gnupg,target=/home/vscode/.gnupg,type=bind,consistency=cached"
+        "source=${localEnv:HOME}/.gnupg,target=/home/vscode/.gnupg,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.config,target=/home/vscode/.config,type=bind,consistency=cached"
     ]
 }
